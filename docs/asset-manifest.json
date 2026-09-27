@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/didactic-octo-tribble/static/js/main.b8e5113b.js",
+    "main.js": "/didactic-octo-tribble/static/js/main.e874f152.js",
     "index.html": "/didactic-octo-tribble/index.html",
-    "main.b8e5113b.js.map": "/didactic-octo-tribble/static/js/main.b8e5113b.js.map"
+    "main.e874f152.js.map": "/didactic-octo-tribble/static/js/main.e874f152.js.map"
   },
   "entrypoints": [
-    "static/js/main.b8e5113b.js"
+    "static/js/main.e874f152.js"
   ]
 }
