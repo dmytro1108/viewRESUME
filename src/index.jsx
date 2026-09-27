@@ -26,18 +26,18 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const react_1 = __importStar(require("react"));
 const client_1 = require("react-dom/client");
 const react_router_dom_1 = require("react-router-dom");
-require("./my-button.css");
 // fill in an array with the objects
 let toChooseFrom = [
-    { company: "Argos Scientific Inc,",
-        date: "July 2023 - May 2024",
-        desc: "Data Analyst",
-        b1: "Analyzed fence-line air quality datasets measuring particulate matter (PM2.5 and PM10), volatile organic compounds, and gas concentrations with ppm accuracy.",
-        b2: "Conducted R&D involving fiber optics and mirrors to increase gas detection sensitivity by ~30-35% to scale air quality monitoring operations.",
-        b3: "Built and maintained 4 air quality monitoring stations, calibration, upkeep, and real-time data transmission for 12+ particulate matter monitor units.",
-        b4: "Wrote comprehensive particulate matter units operation manuals, reducing onboarding time for new technicians by 40%.",
-        b5: "Coordinated R&D projects with global teams, managing international shipping logistics to destinations including Israel, Taiwan, and Saudi Arabia for sensitive environmental monitoring equipment.",
-        b6: "Developed Python scripts to process sensor data to store in a database, enabling faster data access through out the company."
+    {
+        company: "Argos Scientific Inc | Camas, WA",
+        date: "2023 – 2024",
+        desc: "Technical Data & Documentation Technician",
+        b1: "Maintained accurate technical records, project notes, and documentation for ongoing research and equipment-related work.",
+        b2: "Reviewed project information and technical materials carefully to support accurate reporting and internal decision-making.",
+        b3: "Organized data, files, and records so team members could locate information and track project status.",
+        b4: "Followed established procedures when handling sensitive data, technical equipment, and project documentation.",
+        b5: "Communicated findings, updates, and issues clearly with team members and stakeholders.",
+        b6: "Helped identify unclear, missing, or inconsistent information and raised questions when additional review was needed."
     }
 ];
 /**
@@ -49,30 +49,31 @@ let toChooseFrom = [
 class JobExperience extends react_1.Component {
     render() {
         // convert array elements to JSX
-        let sDetails = toChooseFrom.map((i) => (<ul style={{ fontSize: "23px" }}> 
-
-                <div style={{ display: "flex", justifyContent: "space-between", fontSize: "25px", marginTop: "30px" }}>
-                    <span style={{ fontSize: "28px", marginBottom: "10px" }}>{i.company}</span>
-                    <span style={{ textAlign: "right", fontSize: "28px", marginBottom: "10px" }}>{i.date}</span> 
-                </div>
-                <div style={{ fontSize: "25px", }}>
-                    <i>
+        let sDetails = toChooseFrom.map((i) => (<ul style={{ fontSize: "23px", paddingLeft: "20px" }}> 
+    
+                    <div style={{ fontSize: "28px", fontWeight: "bold", marginTop: "15px" }}>
                         {i.desc}
-                    </i>
-                </div>
-                <ul>
-                    <li>{i.b1}</li>
-                    <li>{i.b2}</li>
-                    <li>{i.b3}</li>
-                    <li>{i.b4}</li>
-                    <li>{i.b6}</li>
-                </ul>
-            </ul>));
+                    </div>
+                    <div style={{ fontSize: "24px", fontWeight: "600", marginTop: "4px" }}>
+                        {i.company}
+                    </div>
+                    <div style={{ fontSize: "22px", marginTop: "2px", marginBottom: "12px" }}>
+                        {i.date}
+                    </div>
+                    <ul style={{ listStyleType: "disc", paddingLeft: "25px" }}>
+                        <li style={{ marginBottom: "8px" }}>{i.b1}</li>
+                        <li style={{ marginBottom: "8px" }}>{i.b2}</li>
+                        <li style={{ marginBottom: "8px" }}>{i.b3}</li>
+                        <li style={{ marginBottom: "8px" }}>{i.b4}</li>
+                        <li style={{ marginBottom: "8px" }}>{i.b5}</li>
+                        <li style={{ marginBottom: "8px" }}>{i.b6}</li>
+                    </ul>
+                </ul>));
         return <div>
-                <div style={{ fontSize: "23px", marginTop: "8px" }}>
-                    {sDetails}
-                </div>             
-            </div>;
+                    <div style={{ fontSize: "23px", marginTop: "8px" }}>
+                        {sDetails}
+                    </div>             
+                </div>;
     }
 }
 /**
@@ -80,62 +81,65 @@ class JobExperience extends react_1.Component {
  */
 class Description extends react_1.Component {
     render() {
-        // text reading the name of the game
-        // the rules
-        // and lets the player see their score
         return <div>
-                <ul>
-                    
-                    {/* Name */}
-                    <div style={{ textAlign: "center", fontSize: "40px", fontWeight: "bold" }}>
-                        Dmytro Hodarenko
-                    </div>
+                    <ul>
+                        
+                        {/* Name */}
+                        <div style={{ textAlign: "left", fontSize: "42px", fontWeight: "bold" }}>
+                            Dmytro (Dima) Hodarenko
+                        </div>
+    
+                        {/* Contact Info */}
+                        <div style={{ textAlign: "left", fontSize: "22px", marginTop: "8px", marginBottom: "28px" }}>
+                            dmytro1108@gmail.com | <a href="https://github.com/dmytro1108" target="_blank" rel="noreferrer">https://github.com/dmytro1108</a> | +1 360 843 3912
+                        </div>
+    
+                        {/* Professional Skills */}
+                        <div style={{ fontSize: "32px", fontWeight: "bold", marginTop: "24px" }}>
+                            Professional Skills
+                        </div>
+                        <ul style={{ fontSize: "22px", marginTop: "12px", listStyleType: "disc", paddingLeft: "25px", lineHeight: "1.6" }}>
+                            <li>Research, documentation, record keeping, data handling, and careful review of technical information</li>
+                            <li>Written communication, issue summaries, team updates, and organized project notes</li>
+                            <li>Spreadsheet and data tools: Microsoft Office 365, Excel, SQL, GitHub</li>
+                            <li>Technical tools: Windows PowerShell, Linux, GitHub, basic database concepts</li>
+                            <li>Programming exposure: Python, Java, TypeScript, C, Haskell, Swift</li>
+                            <li>Work habits: attention to detail, independent problem solving, reliability, and following procedures</li>
+                            <li>Languages: English — Fluent; Ukrainian — Fluent</li>
+                        </ul>
+    
+                        {/* Education */}
+                        <div style={{ fontSize: "32px", fontWeight: "bold", marginTop: "32px" }}>
+                            Education
+                        </div>
+                        <div style={{ marginTop: "12px", fontSize: "24px" }}>
+                            <div style={{ fontWeight: "bold" }}>
+                                BS in Computer Science
+                            </div>
+                            <div style={{ fontSize: "22px" }}>
+                                Washington State University | Vancouver, WA
+                            </div>
+                            <div style={{ fontSize: "22px", marginBottom: "16px" }}>
+                                Expected 2027
+                            </div>
 
-                    {/* Contact Info */}
-                    <div style={{ textAlign: "center", fontSize: "20px", marginTop: "12px", marginBottom: "24px" }}>
-                        dmytro.hodarenko@wsu.edu • (360) 843-3912 • <a href="https://app.joinhandshake.com/profiles/n52mv5" target="_blank" rel="noreferrer">Handshake Profile</a>
-                    </div>
-
-                    {/* Objective */}
-                    <div style={{ fontSize: "30px", fontWeight: "600", marginTop: "24px", borderBottom: "2px solid #bbb", paddingBottom: "4px" }}>
-                        Objective
-                    </div>
-                    <div style={{ fontSize: "23px", marginTop: "8px" }}>
-                        Leverage early exposure to Data Science and environmental analytics to apply advanced measurement techniques and AI-driven analysis to achieve the companies goals in procedure automation and AI integration. 
-                    </div>
-
-                    {/* Education */}
-                    <div style={{ fontSize: "30px", fontWeight: "600", marginTop: "24px", borderBottom: "2px solid #bbb", paddingBottom: "4px" }}>
-                        Education
-                    </div>
-                    <div style={{ marginTop: "12px" }}>
-                    <div style={{ display: "flex", justifyContent: "space-between", fontSize: "28px" }}>
-                        <span>Washington State University, Vancouver, WA</span>
-                        <span>Expected June 2026</span>
-                    </div>
-                    <div style={{ fontSize: "23px", marginBottom: "12px" }}>
-                        <i>
-                            Bachelor of Science in Computer Science and Minor in Math • 3.21 GPA
-                        </i>
-                    </div>
-                    <div style={{ display: "flex", justifyContent: "space-between", fontSize: "28px" }}>
-                        <span>Clark College, Vancouver, WA</span>
-                        <span>Fall 2018 - Spring 2021</span>
-                    </div>
-                    <div style={{ fontSize: "23px" }}>
-                        <i>
-                            Associates of Arts, General Transfer Degree • 3.54 GPA
-                        </i>
-                    </div>
-                    </div>
-
-
-                    {/* Job Experience */}
-                    <div style={{ fontSize: "30px", fontWeight: "600", marginTop: "24px", borderBottom: "2px solid #bbb", paddingBottom: "4px" }}>
-                        Job Experience
-                    </div>
-                </ul> 
-        </div>;
+                            <div style={{ fontWeight: "bold" }}>
+                                Associates of Arts
+                            </div>
+                            <div style={{ fontSize: "22px" }}>
+                                Clark College | Vancouver, WA
+                            </div>
+                            <div style={{ fontSize: "22px" }}>
+                                Degree Completed
+                            </div>
+                        </div>
+    
+                        {/* Work Experience */}
+                        <div style={{ fontSize: "32px", fontWeight: "bold", marginTop: "32px" }}>
+                            Work Experience
+                        </div>
+                    </ul> 
+            </div>;
     }
 }
 /**
@@ -143,68 +147,50 @@ class Description extends react_1.Component {
  */
 class Extra extends react_1.Component {
     render() {
-        // text reading the name of the game
-        // the rules
-        // and lets the player see their score
         return <div>
-                <ul>
-                    {/* Personal Projects */}
-                    <div style={{ fontSize: "30px", fontWeight: "600", marginTop: "24px", borderBottom: "2px solid #bbb", paddingBottom: "4px" }}>
-                        Personal Projects
-                    </div>
-                    <div style={{ fontSize: "23px", marginTop: "8px" }}>
+                    <ul>
+                        {/* Projects */}
+                        <div style={{ fontSize: "32px", fontWeight: "bold", marginTop: "32px" }}>
+                            Projects
+                        </div>
+                        <div style={{ fontSize: "23px", marginTop: "12px" }}>
 
-                        <li>
-                            <div style={{ fontSize: "23px", fontWeight: "600" }}>
-                                Micrograd Neural Network Optimization
-                            </div>
-                                Trained and optimized a micrograd-based neural network in Python implementing cross-entropy loss to improve classification accuracy over 10 training generations. Achieved an average 10% accuracy increase per iteration and reduced loss by 15% through parameter tuning and learning rate adjustments.
-                        </li>
-                        <li>
-                            
-                            <div style={{ fontSize: "23px", fontWeight: "600" }}>
-                                Business app (website for a small business)
-                            </div>
-                            Took up writing a React app for a small business over the summer. Utilized HTML, CSS, and Typescript to make a responsive, interactive website. Leveraged AI-assisted code for the overall theme of the front-end layout. Deployed the site via Netlify for the client that now serves as the primary brand presence, improving customer engagement and expanding reach by 50%.
-                            
-                        </li>
-                        <li>
-                            
-                            <div style={{ fontSize: "23px", fontWeight: "600" }}>
-                                Roblox Game (personal project)
-                            </div>
-                            Wrote a modular Lua game using the MVC app design pattern. Used an AI tool to generate code for a server script that links event handling in ReplicatedStorage with modules in ServerScriptServices to separate code between the front-end and back-end logic for modularity and maintainability of the game.
-                            
-                        </li>
-                    </div>
+                            <li style={{ listStyleType: "none" }}>
+                                <div style={{ fontSize: "26px", fontWeight: "bold" }}>
+                                    logdocTIMESYNC
+                                </div>
+                                <div style={{ fontSize: "20px", fontStyle: "italic", marginBottom: "8px" }}>
+                                    Electron • React • TypeScript • SQLite • Python • IPC Architecture
+                                </div>
+                                <ul style={{ listStyleType: "disc", paddingLeft: "25px", fontSize: "22px", lineHeight: "1.5" }}>
+                                    <li style={{ marginBottom: "6px" }}>Built a cross-platform desktop application for business users to document, track, and manage document-based workflows.</li>
+                                    <li style={{ marginBottom: "6px" }}>Implemented a local data layer using SQLite (better-sqlite3) with IPC-driven backend architecture for secure renderer–main process communication.</li>
+                                    <li style={{ marginBottom: "6px" }}>Developed tools for manual and automated mileage tracking, including OCR/VLM-powered receipt parsing and trip-distance calculation via Python integrations.</li>
+                                    <li style={{ marginBottom: "6px" }}>Added account management (login/signup), theme switching, trip history, and JSON export features to improve usability and reporting.</li>
+                                    <li style={{ marginBottom: "6px" }}>Structured the app into modular layers (main, preload, renderer, shared types), improving maintainability and scalability for future features.</li>
+                                </ul>
+                            </li>
 
-                    {/* Professional Skills */}
-                    <div style={{ fontSize: "30px", fontWeight: "600", marginTop: "24px", borderBottom: "2px solid #bbb", paddingBottom: "4px" }}>
-                        Professional Skills
-                    </div>
-                    <div style={{ fontSize: "23px", marginTop: "8px" }}>
-                        Python • Java • TypeScript • JavaScript • C <br />
-                        Git • Tableau • Data Analysis • NoSQL • SQL • Automation Scripting • AI Tools
-                    </div>
-                </ul>
-            </div>;
+                        </div>
+                    </ul>
+                </div>;
     }
 }
 function Welcome() {
     return (<div className="welcome-wrap">
-            {/* Squiggle + ring */}
-            <div className="circle-wrap">
-                <react_router_dom_1.Link to="osume">
-                    <button className="my-button circle-button" aria-label="Open resume" style={{
+                {/* Squiggle + ring */}
+                <div className="circle-wrap">
+                    <react_router_dom_1.Link to="osume">
+                        <button className="my-button circle-button" aria-label="Open resume" style={{
             justifyContent: "center",
             background: "#a143ffff",
             border: "none",
             cursor: "pointer"
         }}>
-                        
-                    </button>
-                </react_router_dom_1.Link>
-                    <svg viewBox="0 0 220 220" width="220" height="220" style={{
+                            
+                        </button>
+                    </react_router_dom_1.Link>
+                        <svg viewBox="0 0 220 220" width="220" height="220" style={{
             position: "absolute",
             top: "50%",
             left: "50%",
@@ -213,19 +199,19 @@ function Welcome() {
             zIndex: 3,
             animation: "rotateText 12s linear infinite",
         }} aria-hidden="true">
-                    <defs>
-                        {/* Circle path for text to follow */}
-                        <path id="text-circle" d="M110,110 m-100,0 a100,100 0 1,1 200,0 a100,100 0 1,1 -200,0"/>
-                    </defs>
-
-                    <text fill="#222" fontSize="15" fontFamily="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif" letterSpacing="2" textAnchor="middle">
-                        <textPath xlinkHref="#text-circle" startOffset="50%">
-                            CLICK ME • CLICK ME • CLICK ME • CLICK ME • CLICK ME • CLICK ME •
-                        </textPath>
-                    </text>
-                </svg>
-            </div>
-        </div>);
+                        <defs>
+                            {/* Circle path for text to follow */}
+                            <path id="text-circle" d="M110,110 m-100,0 a100,100 0 1,1 200,0 a100,100 0 1,1 -200,0"/>
+                        </defs>
+    
+                        <text fill="#222" fontSize="15" fontFamily="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif" letterSpacing="2" textAnchor="middle">
+                            <textPath xlinkHref="#text-circle" startOffset="50%">
+                                CLICK ME • CLICK ME • CLICK ME • CLICK ME • CLICK ME • CLICK ME •
+                            </textPath>
+                        </text>
+                    </svg>
+                </div>
+            </div>);
 }
 const rootElem = document.getElementById('root');
 if (rootElem == null) {
@@ -234,23 +220,9 @@ if (rootElem == null) {
 const root = (0, client_1.createRoot)(rootElem);
 //<Board height={10} width={10}/>
 root.render(<react_1.StrictMode>
-        <react_router_dom_1.BrowserRouter basename="/didactic-octo-tribble">
-            <react_router_dom_1.Routes>
-               <react_router_dom_1.Route path="/" element={<div style={{
-            minHeight: "100vh",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            position: "relative",
-            background: "#fafafaff"
-        }}>
-                           <Welcome />
-                       </div>}/>
-                <react_router_dom_1.Route path="osume" element={<div>
-                            <Description />
-                            <JobExperience />
-                            <Extra />
-                        </div>}/>
-            </react_router_dom_1.Routes>
-        </react_router_dom_1.BrowserRouter>
-    </react_1.StrictMode>);
+            <div>
+                <Description />
+                <JobExperience />
+                <Extra />
+            </div>
+        </react_1.StrictMode>);
