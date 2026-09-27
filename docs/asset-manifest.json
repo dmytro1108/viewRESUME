@@ -1,13 +1,10 @@
 {
   "files": {
-    "main.css": "/didactic-octo-tribble/static/css/main.0847c654.css",
-    "main.js": "/didactic-octo-tribble/static/js/main.b2cc7ccf.js",
+    "main.js": "/didactic-octo-tribble/static/js/main.b8e5113b.js",
     "index.html": "/didactic-octo-tribble/index.html",
-    "main.0847c654.css.map": "/didactic-octo-tribble/static/css/main.0847c654.css.map",
-    "main.b2cc7ccf.js.map": "/didactic-octo-tribble/static/js/main.b2cc7ccf.js.map"
+    "main.b8e5113b.js.map": "/didactic-octo-tribble/static/js/main.b8e5113b.js.map"
   },
   "entrypoints": [
-    "static/css/main.0847c654.css",
-    "static/js/main.b2cc7ccf.js"
+    "static/js/main.b8e5113b.js"
   ]
 }
