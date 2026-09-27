@@ -182,62 +182,6 @@ import React, { StrictMode, Component, ReactNode, cloneElement,
             }
     }
     
-    function Welcome() {
-        return (
-            <div className="welcome-wrap">
-                {/* Squiggle + ring */}
-                <div className="circle-wrap">
-                    <Link to="osume">
-                        <button
-                            className="my-button circle-button"
-                            aria-label="Open resume"
-                            style={{
-                                justifyContent: "center",
-                                background: "#a143ffff",
-                                border: "none",
-                                cursor: "pointer"
-                            }}>
-                            
-                        </button>
-                    </Link>
-                        <svg
-                        viewBox="0 0 220 220"
-                        width="220"
-                        height="220"
-                        style={{
-                            position: "absolute",
-                            top: "50%",
-                            left: "50%",
-                            transform: "translate(-50%, -50%)",
-                            pointerEvents: "none", // let clicks go to the button
-                            zIndex: 3,
-                            animation: "rotateText 12s linear infinite",
-                        }}
-                        aria-hidden="true"
-                        >
-                        <defs>
-                            {/* Circle path for text to follow */}
-                            <path id="text-circle" d="M110,110 m-100,0 a100,100 0 1,1 200,0 a100,100 0 1,1 -200,0" />
-                        </defs>
-    
-                        <text
-                            fill="#222"
-                            fontSize="15"
-                            fontFamily="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif"
-                            letterSpacing="2"
-                            textAnchor="middle"
-                        >
-                            <textPath xlinkHref="#text-circle" startOffset="50%">
-                                CLICK ME • CLICK ME • CLICK ME • CLICK ME • CLICK ME • CLICK ME •
-                            </textPath>
-                        </text>
-                    </svg>
-                </div>
-            </div>
-        );
-    }
-    
-    
     const rootElem = document.getElementById('root');
     
     if( rootElem == null ) {
@@ -248,10 +192,19 @@ import React, { StrictMode, Component, ReactNode, cloneElement,
     //<Board height={10} width={10}/>
     root.render(
         <StrictMode>
-            <div>
-                <Description/>
-                <JobExperience/>
-                <Extra/>
-            </div>
+            <BrowserRouter basename="/didactic-octo-tribble">
+                <Routes>
+                    <Route
+                        path="/"
+                        element={
+                            <div>
+                                <Description/>
+                                <JobExperience/>
+                                <Extra/>
+                            </div>
+                        }
+                    />
+                </Routes>
+            </BrowserRouter>
         </StrictMode>
     );
