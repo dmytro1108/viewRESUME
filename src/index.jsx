@@ -183,7 +183,7 @@ if (rootElem == null) {
 const root = (0, client_1.createRoot)(rootElem);
 //<Board height={10} width={10}/>
 root.render(<react_1.StrictMode>
-            <react_router_dom_1.BrowserRouter basename="/didactic-octo-tribble">
+            <react_router_dom_1.BrowserRouter basename="/viewRESUME">
                 <react_router_dom_1.Routes>
                     <react_router_dom_1.Route path="/" element={<div>
                                 <Description />

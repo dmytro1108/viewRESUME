@@ -192,7 +192,7 @@ import React, { StrictMode, Component, ReactNode, cloneElement,
     //<Board height={10} width={10}/>
     root.render(
         <StrictMode>
-            <BrowserRouter basename="/didactic-octo-tribble">
+            <BrowserRouter basename="/viewRESUME">
                 <Routes>
                     <Route
                         path="/"

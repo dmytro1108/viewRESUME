@@ -6,7 +6,7 @@
   "author": "",
   "type": "commonjs",
   "main": "index.js",
-  "homepage": "https://dmytro1108.github.io/didactic-octo-tribble",
+  "homepage": "https://dmytro1108.github.io/viewRESUME",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -b main -d build",
